@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tutorial';
+  name = "Kevin From Root Component";
+  public message = "";
 }

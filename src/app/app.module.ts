@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './components/demo/demo.component';
@@ -9,6 +10,9 @@ import { ReferenceTemplateVariableComponent } from './components/reference-templ
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { StructuralComponent } from './components/structural/structural.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { ComponentInteractionComponent } from './components/component-interaction/component-interaction.component';
+import { ServiceComponent } from './components/service/service.component';
+import { TestService } from './test.service';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,19 @@ import { PipeComponent } from './components/pipe/pipe.component';
     ReferenceTemplateVariableComponent,
     TwoWayBindingComponent,
     StructuralComponent,
-    PipeComponent
+    PipeComponent,
+    ComponentInteractionComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
